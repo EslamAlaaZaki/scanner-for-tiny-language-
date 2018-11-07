@@ -42,7 +42,7 @@ namespace Scanner
             
             T.Rows.Clear();
             dataGridView1.DataSource = T;
-            if (!File.Exists(filePath.Text)) error.Visible = true;
+             if (!File.Exists(filePath.Text)|Path.GetExtension(filePath.Text)!=".txt") error.Visible = true;
             else
             {
                 error.Visible=false ;
